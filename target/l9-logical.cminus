@@ -1,0 +1,61 @@
+void main() {
+	int a;
+	double b;
+	char c;
+
+	a = a || a;
+	a = a && b; // Error in line 7
+	a = a || c; // Error in line 8
+	a = a && 'a'; // Error in line 9
+	a = a && 1;
+	a = a && 1.5; // Error in line 11
+	a = a || d; // Error in line 12
+
+	a = b && a; // Error in line 14
+	a = b || b; // Error in line 15
+	a = b && c; // Error in line 16
+	a = b && 'a'; // Error in line 17
+	a = b && 1; // Error in line 18
+	a = b || 1.5; // Error in line 19
+	a = b || d; // Error in line 20
+
+	a = c || a; // Error in line 22
+	a = c && b; // Error in line 23
+	a = c || c; // Error in line 24
+	a = c || 'a'; // Error in line 25
+	a = c || 1; // Error in line 26
+	a = c || 1.5; // Error in line 27
+	a = c || d; // Error in line 28
+
+	a = 'a' && a; // Error in line 30
+	a = 'a' || b; // Error in line 31
+	a = 'a' || c; // Error in line 32
+	a = 'a' && 'a'; // Error in line 33
+	a = 'a' && 1; // Error in line 34
+	a = 'a' && 1.5; // Error in line 35
+	a = 'a' || d; // Error in line 36
+
+	a = 1 || a;
+	a = 1 || b; // Error in line 39
+	a = 1 || c; // Error in line 40
+	a = 1 && 'a'; // Error in line 41
+	a = 1 || 1;
+	a = 1 && 1.5; // Error in line 43
+	a = 1 && d; // Error in line 44
+
+	a = 1.5 && a; // Error in line 46
+	a = 1.5 || b; // Error in line 47
+	a = 1.5 && c; // Error in line 48
+	a = 1.5 && 'a'; // Error in line 49
+	a = 1.5 || 1; // Error in line 50
+	a = 1.5 && 1.5; // Error in line 51
+	a = 1.5 && d; // Error in line 52
+
+	a = d || a; // Error in line 54
+	a = d || b; // Error in line 55
+	a = d || c; // Error in line 56
+	a = d && 'a'; // Error in line 57
+	a = d || 1; // Error in line 58
+	a = d || 1.5; // Error in line 59
+	a = d && d; // Error in line 60
+}

@@ -1,0 +1,13 @@
+void main() {
+	int a;
+	double b;
+	char c;
+
+	a = !a;
+	a = !b; // Error in line 7
+	a = !c; // Error in line 8
+	a = !'a'; // Error in line 9
+	a = !1;
+	a = !1.5; // Error in line 11
+	a = !d; // Error in line 12
+}
