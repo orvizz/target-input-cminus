@@ -1,0 +1,13 @@
+void main() {
+	int a;
+	double b;
+	char c;
+
+	a = -a;
+	a = -b;
+	a = -c;
+	a = -'a';
+	a = -1;
+	a = -1.5;
+	a = -d; // Error in line 12
+}
