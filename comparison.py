@@ -1,9 +1,8 @@
-variables = ['a', 'b', 'c']
-literals = ["'a'", 1, 1.5]
-undeclaredVar = 'd'
+import random
 allExpr = ['a', 'b', 'c', "'a'", 1, 1.5, 'd']
+operators = ['>', '<', '>=', '<=', '==', '!=']
 
-with open('target/l9-arithmetic.cminus', 'w') as f:
+with open('target/l9-comparison.cminus', 'w') as f:
     f.write("void main() {\n")
     f.write("\tint a;\n\tdouble b;\n\tchar c;\n")
     line = 4
@@ -13,11 +12,9 @@ with open('target/l9-arithmetic.cminus', 'w') as f:
         line+=1
         for expr2 in allExpr:
             line+=1
-            finalAssign = assign + ' + ' + str(expr2) + ';'
+            finalAssign = assign + f' {operators[random.randint(0,len(operators)-1)]} ' + str(expr2) + ';'
             if not((expr == 1 or expr == 'a')  and (expr2 == 1 or expr2 == 'a') or (expr == "'a'" or expr == 'c')  and (expr2 == "'a'" or expr2 == 'c') or (expr == 1.5 or expr == 'b')  and (expr2 == 1.5 or expr2 == 'b')):
                 finalAssign += f" // Error in line {line}"
             finalAssign+= "\n"
             f.write(f"\t{finalAssign}")
     f.write("}\n")
-
-
