@@ -2,77 +2,99 @@ void main() {
 	int a;
 	double b;
 	char c;
-int[10] iArr;
+	int[10] iArr;
+	struct {
+		int a;
+		int b;
+	} pair;
 
-	a = a[a]; // Error in line 7
-	a = a[b]; // Error in line 8
-	a = a[c]; // Error in line 9
-	a = a['a']; // Error in line 10
-	a = a[1]; // Error in line 11
-	a = a[1.5]; // Error in line 12
-	a = a[d]; // Error in line 13
-	a = a[iArr]; // Error in line 14
+	a = a[a]; // Error in line 11
+	a = a[b]; // Error in line 12
+	a = a[c]; // Error in line 13
+	a = a['a']; // Error in line 14
+	a = a[1]; // Error in line 15
+	a = a[1.5]; // Error in line 16
+	a = a[d]; // Error in line 17
+	a = a[iArr]; // Error in line 18
+	a = a[pair]; // Error in line 19
 
-	a = b[a]; // Error in line 16
-	a = b[b]; // Error in line 17
-	a = b[c]; // Error in line 18
-	a = b['a']; // Error in line 19
-	a = b[1]; // Error in line 20
-	a = b[1.5]; // Error in line 21
-	a = b[d]; // Error in line 22
-	a = b[iArr]; // Error in line 23
+	a = b[a]; // Error in line 21
+	a = b[b]; // Error in line 22
+	a = b[c]; // Error in line 23
+	a = b['a']; // Error in line 24
+	a = b[1]; // Error in line 25
+	a = b[1.5]; // Error in line 26
+	a = b[d]; // Error in line 27
+	a = b[iArr]; // Error in line 28
+	a = b[pair]; // Error in line 29
 
-	a = c[a]; // Error in line 25
-	a = c[b]; // Error in line 26
-	a = c[c]; // Error in line 27
-	a = c['a']; // Error in line 28
-	a = c[1]; // Error in line 29
-	a = c[1.5]; // Error in line 30
-	a = c[d]; // Error in line 31
-	a = c[iArr]; // Error in line 32
+	a = c[a]; // Error in line 31
+	a = c[b]; // Error in line 32
+	a = c[c]; // Error in line 33
+	a = c['a']; // Error in line 34
+	a = c[1]; // Error in line 35
+	a = c[1.5]; // Error in line 36
+	a = c[d]; // Error in line 37
+	a = c[iArr]; // Error in line 38
+	a = c[pair]; // Error in line 39
 
-	a = 'a'[a]; // Error in line 34
-	a = 'a'[b]; // Error in line 35
-	a = 'a'[c]; // Error in line 36
-	a = 'a'['a']; // Error in line 37
-	a = 'a'[1]; // Error in line 38
-	a = 'a'[1.5]; // Error in line 39
-	a = 'a'[d]; // Error in line 40
-	a = 'a'[iArr]; // Error in line 41
+	a = 'a'[a]; // Error in line 41
+	a = 'a'[b]; // Error in line 42
+	a = 'a'[c]; // Error in line 43
+	a = 'a'['a']; // Error in line 44
+	a = 'a'[1]; // Error in line 45
+	a = 'a'[1.5]; // Error in line 46
+	a = 'a'[d]; // Error in line 47
+	a = 'a'[iArr]; // Error in line 48
+	a = 'a'[pair]; // Error in line 49
 
-	a = 1[a]; // Error in line 43
-	a = 1[b]; // Error in line 44
-	a = 1[c]; // Error in line 45
-	a = 1['a']; // Error in line 46
-	a = 1[1]; // Error in line 47
-	a = 1[1.5]; // Error in line 48
-	a = 1[d]; // Error in line 49
-	a = 1[iArr]; // Error in line 50
+	a = 1[a]; // Error in line 51
+	a = 1[b]; // Error in line 52
+	a = 1[c]; // Error in line 53
+	a = 1['a']; // Error in line 54
+	a = 1[1]; // Error in line 55
+	a = 1[1.5]; // Error in line 56
+	a = 1[d]; // Error in line 57
+	a = 1[iArr]; // Error in line 58
+	a = 1[pair]; // Error in line 59
 
-	a = 1.5[a]; // Error in line 52
-	a = 1.5[b]; // Error in line 53
-	a = 1.5[c]; // Error in line 54
-	a = 1.5['a']; // Error in line 55
-	a = 1.5[1]; // Error in line 56
-	a = 1.5[1.5]; // Error in line 57
-	a = 1.5[d]; // Error in line 58
-	a = 1.5[iArr]; // Error in line 59
+	a = 1.5[a]; // Error in line 61
+	a = 1.5[b]; // Error in line 62
+	a = 1.5[c]; // Error in line 63
+	a = 1.5['a']; // Error in line 64
+	a = 1.5[1]; // Error in line 65
+	a = 1.5[1.5]; // Error in line 66
+	a = 1.5[d]; // Error in line 67
+	a = 1.5[iArr]; // Error in line 68
+	a = 1.5[pair]; // Error in line 69
 
-	a = d[a]; // Error in line 61
-	a = d[b]; // Error in line 62
-	a = d[c]; // Error in line 63
-	a = d['a']; // Error in line 64
-	a = d[1]; // Error in line 65
-	a = d[1.5]; // Error in line 66
-	a = d[d]; // Error in line 67
-	a = d[iArr]; // Error in line 68
+	a = d[a]; // Error in line 71
+	a = d[b]; // Error in line 72
+	a = d[c]; // Error in line 73
+	a = d['a']; // Error in line 74
+	a = d[1]; // Error in line 75
+	a = d[1.5]; // Error in line 76
+	a = d[d]; // Error in line 77
+	a = d[iArr]; // Error in line 78
+	a = d[pair]; // Error in line 79
 
 	a = iArr[a];
-	a = iArr[b]; // Error in line 71
-	a = iArr[c]; // Error in line 72
-	a = iArr['a']; // Error in line 73
+	a = iArr[b]; // Error in line 82
+	a = iArr[c]; // Error in line 83
+	a = iArr['a']; // Error in line 84
 	a = iArr[1];
-	a = iArr[1.5]; // Error in line 75
-	a = iArr[d]; // Error in line 76
-	a = iArr[iArr]; // Error in line 77
+	a = iArr[1.5]; // Error in line 86
+	a = iArr[d]; // Error in line 87
+	a = iArr[iArr]; // Error in line 88
+	a = iArr[pair]; // Error in line 89
+
+	a = pair[a]; // Error in line 91
+	a = pair[b]; // Error in line 92
+	a = pair[c]; // Error in line 93
+	a = pair['a']; // Error in line 94
+	a = pair[1]; // Error in line 95
+	a = pair[1.5]; // Error in line 96
+	a = pair[d]; // Error in line 97
+	a = pair[iArr]; // Error in line 98
+	a = pair[pair]; // Error in line 99
 }

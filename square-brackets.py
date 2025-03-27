@@ -1,13 +1,13 @@
 variables = ['a', 'b', 'c']
 literals = ["'a'", 1, 1.5]
 undeclaredVar = 'd'
-allExpr = ['a', 'b', 'c', "'a'", 1, 1.5, 'd', 'iArr']
+allExpr = ['a', 'b', 'c', "'a'", 1, 1.5, 'd', 'iArr', 'pair']
 
 
 with open('target/l9-square-brackets.cminus', 'w') as f:
     f.write("void main() {\n")
-    f.write("\tint a;\n\tdouble b;\n\tchar c;\nint[10] iArr;\n")
-    line = 5
+    f.write("\tint a;\n\tdouble b;\n\tchar c;\n\tint[10] iArr;\n\tstruct {\n\t\tint a;\n\t\tint b;\n\t} pair;\n")
+    line = 9
     for expr in allExpr:
         f.write("\n")
         assign = 'a = ' + str(expr)
