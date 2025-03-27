@@ -2,12 +2,21 @@ void main() {
 	int a;
 	double b;
 	char c;
+	int[10] iArr;
+	struct {
+		int a;
+		int b;
+	} pair;
 
-	a = (int) a;
-	a = (int) b;
-	a = (double) c;
-	a = (char) 'a';
-	a = (char) 1;
-	a = (double) 1.5;
-	a = (char) d; // Error in line 12
+	a = (double) a;
+	a = (char) b;
+	a = (int) c;
+	a = (double) 'a';
+	a = (int) 1;
+	a = (char) 1.5;
+	a = (char) d; // Error in line 17
+	a = (double) iArr; // Error in line 18
+	a = (int) pair; // Error in line 19
+	a = (int[10]) iArr; // Error in line 20
+	iArr = (int[10]) 1; // Error in line 20
 }
