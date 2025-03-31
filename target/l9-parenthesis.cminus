@@ -1,0 +1,25 @@
+int f(int a) {
+    return 3;
+}
+
+void p() {
+    int a;
+    a = 4 + 78;
+}
+
+void main() {
+
+    int b;
+    b = f(3) + 6;
+    f(7);
+    f('a'); // Error in line 15
+    f(2.3); // Error in line 16
+    f(3, 23, 56); // Error in line 17
+    p();
+    p(2); // Error in line 19
+    p(2.3); // Error in line 20
+    p('a'); // Error in line 21
+    f(d); // Error in line 22
+    f(3, d); // Error in line 23
+    p(d); // Error in line 24
+}
