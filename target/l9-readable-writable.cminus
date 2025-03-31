@@ -1,0 +1,25 @@
+void main() {
+    struct {
+        int a;
+        double b;
+        char c;
+    } record;
+
+    int[10][5] arr;
+
+    read record.a;
+    write record.b;
+    read record; // Error
+
+    read arr[2]; // Error
+    write arr[2]; // Error
+    read arr[2][1];
+    write arr[2][1];
+
+    write arr; // Error
+
+    write 3 + 4 ;
+
+    read 3; // Error
+    read 3*5-12; // Error
+}

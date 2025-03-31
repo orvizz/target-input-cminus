@@ -1,0 +1,53 @@
+struct {
+    int integer;
+    double size;
+    char character;
+} record;
+
+int[10] arr;
+
+int f() {
+    return 1;
+}
+
+double a() {
+    return 2.2;
+}
+
+char c() {
+    return 'a';
+}
+
+void d() {
+    return 2; // Error line 22
+}
+
+int e() {
+    int z;
+    read z;
+
+    if(z > 3) {
+        return 'a'; // Error line 30
+    } else {
+        return 2.3; // Error line 32
+    }
+    return f();
+    return a(); // Error line 35
+    return arr; // Error line 36
+    return record; // Error line 37
+    return record.integer;
+    return record.size; // Error line 39
+    return record.character; // Error line 40
+}
+
+int e(){
+    return 2;
+}
+
+double g() {
+    // Should give an error (missing return statement)
+}
+
+void main() {
+
+}

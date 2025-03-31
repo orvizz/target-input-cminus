@@ -29,13 +29,13 @@ with open('target/l9-assignment.cminus', 'w') as f:
                     if f'pair.{field}' not in valid_assignments[var]:
                         error_comment = f" // Error in line {line}"
                     if field == 'd':
-                        finalAssign2 += f" // Error in line {line}"
+                        error_comment = f" // Error in line {line}"
                     finalAssign2 += f"{error_comment}\n"
                     f.write(f"\t{finalAssign2}")
             else:
+                line += 1
                 if expr not in valid_assignments[var]:
                     error_comment = f" // Error in line {line}"
-                line += 1
                 finalAssign += f";{error_comment}\n"
                 f.write(f"\t{finalAssign}")
         f.write("\n")
