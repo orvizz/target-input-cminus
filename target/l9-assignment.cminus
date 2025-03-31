@@ -1,0 +1,63 @@
+int f(){
+	return 2;
+}
+
+void p(){}
+
+void main() {
+	int a;
+	double b;
+	char c;
+	int[10] iArr;
+	struct {
+		int a;
+		double b;
+		char c;
+	} pair;
+
+	a = a;
+	a = b;
+	a = c;
+	a = 'a';
+	a = 1;
+	a = 1.5;
+	a = d;
+	a = iArr;
+	a = pair.a;
+	a = pair.b;
+	a = pair.c;
+	a = pair.d; // Error in line 29
+	a = f();
+	a = p();
+
+	b = a;
+	b = b;
+	b = c;
+	b = 'a';
+	b = 1;
+	b = 1.5;
+	b = d;
+	b = iArr;
+	b = pair.a;
+	b = pair.b;
+	b = pair.c;
+	b = pair.d; // Error in line 44
+	b = f();
+	b = p();
+
+	c = a;
+	c = b;
+	c = c;
+	c = 'a';
+	c = 1;
+	c = 1.5;
+	c = d;
+	c = iArr;
+	c = pair.a;
+	c = pair.b;
+	c = pair.c;
+	c = pair.d; // Error in line 59
+	c = f();
+	c = p();
+
+}
