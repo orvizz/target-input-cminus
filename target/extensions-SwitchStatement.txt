@@ -1,0 +1,51 @@
+// * Global variables
+int i,n;
+char c;
+struct {
+  int intField;
+  double realField;
+} record;
+
+// * Functions
+int f(int a, double c) {
+  double real;
+  real = c;
+  i = a;
+
+  i = 0;
+  while ( i < 10 ){
+  
+    switch ( i+1 ) {
+
+      case 0: 
+          write 'e','r','r','o','r';
+          
+      case 6: 
+          write 'i',' ','=',' ','5';
+      case 3: 
+          write 'i',' ','=',' ','2';
+      case 1: 
+          write 'i',' ','=',' ','0';
+      case 2: 
+          write 'i',' ','=',' ','1';
+      case 5: 
+          write 'i',' ','=',' ','4';
+      case 4: 
+          write 'i',' ','=',' ','3';
+      default:
+          write 'i',' ','>',' ','5';
+    }
+    i = i + 1;
+  }
+  
+  return n;
+}
+
+// * Main program
+void main() {
+  int i;
+  double r;
+  r = 2;
+  n = 1;
+  write i, f(n,r), record.intField, record.realField;
+}
