@@ -1,0 +1,19 @@
+// * Global variables
+int i = 3;
+int n;
+char c = 'f';
+
+int f(int a, double c) {
+  write 'a',' ','=',' ','3','?',':',' ',a;
+  write 'c',' ','=',' ','0','.','2','?',':',' ',c;
+  n = 7;
+  return n;
+}
+
+// * Main program
+void main() {
+  write 'i',' ','=',' ','3','?',':',' ',i;
+  write 'c',' ','=',' ','f','?',':',' ',c;
+  double r = 0.2;
+  f(i, r);
+}
