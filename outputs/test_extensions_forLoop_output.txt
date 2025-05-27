@@ -1,0 +1,367 @@
+#source "test_extensions_forLoop.txt"
+call main
+halt
+	' * Global variables
+#line 3
+		' * Int i (offset 0)
+#line 3
+		' * Int n (offset 2)
+#line 3
+		' * Int j (offset 4)
+#line 4
+		' * Char c (offset 6)
+#line 9
+		' * Struct pair (offset 7)
+#line 12
+p:
+		' * Parameters
+		' * Local variables
+enter 0
+ret 0 , 0 , 0
+#line 14
+f:
+		' * Parameters
+#line 14
+		' * Double r (offset 6)
+#line 14
+		' * Int e (offset 4)
+		' * Local variables
+#line 15
+		' * Double real (offset -4)
+#line 16
+		' * Char c (offset -5)
+enter 5
+#line 17
+push bp
+pushi -4
+addi
+pusha 7
+pushi 2
+addi
+loadb
+b2i
+i2f
+pusha 7
+pushi 0
+addi
+loadi
+i2f
+addf
+push bp
+pushi 6
+addi
+loadf
+addf
+push bp
+pushi 4
+addi
+loadi
+i2f
+addf
+storef
+#line 18
+push bp
+pushi -5
+addi
+pushb 48
+storeb
+#line 19
+push bp
+pushi -5
+addi
+loadb
+b2i
+ret 2 , 5 , 6
+#line 22
+		' * Array<Array<Int>> matrix (offset 10)
+#line 24
+fill:
+		' * Parameters
+#line 24
+		' * Int row (offset 8)
+#line 24
+		' * Int value (offset 6)
+#line 24
+		' * Int increment (offset 4)
+		' * Local variables
+#line 25
+		' * Int i (offset -2)
+#line 25
+		' * Int inc (offset -4)
+enter 4
+#line 26
+push bp
+pushi -4
+addi
+push bp
+pushi 4
+addi
+loadi
+storei
+#line 27
+#line 27
+push bp
+pushi -2
+addi
+pushi 0
+storei
+label0:
+push bp
+pushi -2
+addi
+loadi
+pushi 10
+lti
+jz label1
+#line 28
+pusha 10
+pushi 20
+push bp
+pushi 8
+addi
+loadi
+muli
+addi
+pushi 2
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+push bp
+pushi 6
+addi
+loadi
+push bp
+pushi -4
+addi
+loadi
+addi
+storei
+#line 29
+push bp
+pushi -4
+addi
+push bp
+pushi -4
+addi
+loadi
+push bp
+pushi 4
+addi
+loadi
+addi
+storei
+#line 27
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label0
+label1:
+ret 0 , 4 , 6
+#line 33
+show:
+		' * Parameters
+#line 33
+		' * Int row (offset 4)
+		' * Local variables
+#line 34
+		' * Int i (offset -2)
+enter 2
+#line 35
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 36
+#line 36
+push bp
+pushi -2
+addi
+pushi 0
+storei
+label2:
+push bp
+pushi -2
+addi
+loadi
+pushi 10
+lti
+jz label3
+#line 37
+pushb 40
+outb
+#line 37
+push bp
+pushi 4
+addi
+loadi
+outi
+#line 37
+pushb 44
+outb
+#line 37
+push bp
+pushi -2
+addi
+loadi
+outi
+#line 37
+pushb 41
+outb
+#line 37
+pushb 58
+outb
+#line 37
+pusha 10
+pushi 20
+push bp
+pushi 4
+addi
+loadi
+muli
+addi
+pushi 2
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadi
+outi
+#line 37
+pushb 32
+outb
+#line 36
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label2
+label3:
+#line 39
+pushb 10
+outb
+ret 0 , 2 , 2
+#line 44
+main:
+		' * Parameters
+		' * Local variables
+#line 45
+		' * Int i (offset -2)
+enter 2
+#line 47
+call p
+#line 48
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 49
+pusha 7
+pushi 2
+addi
+pushb 48
+storeb
+#line 50
+pusha 7
+pushi 0
+addi
+pushb 48
+b2i
+storei
+#line 51
+push bp
+pushi -2
+addi
+loadi
+i2f
+pusha 7
+pushi 2
+addi
+loadb
+b2i
+call f
+outi
+#line 51
+pushb 10
+outb
+#line 53
+pushf 1.2999999523162842
+pushi 2
+call f
+popi
+#line 55
+pusha 4
+pushi 0
+storei
+#line 57
+#line 57
+push bp
+pushi -2
+addi
+pushi 0
+storei
+label4:
+push bp
+pushi -2
+addi
+loadi
+pushi 10
+lti
+jz label5
+#line 58
+push bp
+pushi -2
+addi
+loadi
+pusha 4
+loadi
+pushi 1
+call fill
+#line 59
+push bp
+pushi -2
+addi
+loadi
+call show
+#line 60
+pusha 4
+push bp
+pushi -2
+addi
+loadi
+pushi 10
+muli
+storei
+#line 57
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label4
+label5:
+ret 0 , 2 , 0

@@ -3,7 +3,7 @@
 int i,n,j;
 char c;
 
-struct { 
+struct {
 	int integer;
 	char character;
 } pair;
@@ -23,11 +23,9 @@ int[10][10] matrix;
 
 void fill(int row, int value, int increment) {
 	int i,inc;
-	i=0;
 	inc=increment;
-	while (i<10) {
-		matrix[row][i]=value+inc; 
-		i=i+1;
+	for(i = 0; i < 10; i = i + 1) {
+		matrix[row][i]=value+inc;
 		inc=inc+increment;
 	}
 }
@@ -35,9 +33,8 @@ void fill(int row, int value, int increment) {
 void show(int row) {
 	int i;
 	i=0;
-	while (i<10) {
+	for(i = 0; i < 10; i = i + 1) {
 		write '(', row, ',', i, ')', ':', matrix[row][i], ' ';
-		i=i+1;
 	}
 	write '\n';
 }
@@ -56,9 +53,9 @@ void main() {
 	f(1.3, 2); // * Invocation (function) as statement
 
 	j=0;
-  // Should add new scope for i inside for loop
- for ( int i = 0 ; i < 10; i = i + 1 ){ 
-		fill(i, j, 1); 
+
+ for ( i = 0 ; i < 10; i = i + 1 ){
+		fill(i, j, 1);
 		show(i);
 		j=i*10;
 	}
