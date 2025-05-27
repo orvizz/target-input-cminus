@@ -1,19 +1,31 @@
 // * Global variables
 int i = 3;
 int n;
-char c = 'f';
+char c, e = 'f';
+double d = 2.5;
 
-int f(int a, double c) {
-  write 'a',' ','=',' ','3','?',':',' ',a;
-  write 'c',' ','=',' ','0','.','2','?',':',' ',c;
+int f(int a) {
+  // double r = 0.2; // throws semantic error
+  // double r = 2; // throws semantic error
+
+  double r;
+  r=0.2;
+
+  write 'a',' ','=',' ','3','?',':',' ',a,'\n';
+  write 'r',' ','=',' ','0','.','2','?',':',' ',r,'\n';
+  write 'd',' ','=',' ','2','.','5','?',':',' ',d,'\n';
+
   n = 7;
+
   return n;
 }
 
 // * Main program
 void main() {
-  write 'i',' ','=',' ','3','?',':',' ',i;
-  write 'c',' ','=',' ','f','?',':',' ',c;
-  double r = 0.2;
-  f(i, r);
+
+  write 'i',' ','=',' ','3','?',':',' ',i,'\n';
+  write 'c',' ','=',' ','f','?',':',' ',c,'\n';
+  write 'e',' ','=',' ','f','?',':',' ',e,'\n';
+
+  f(i);
 }
