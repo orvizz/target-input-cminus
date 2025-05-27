@@ -1,0 +1,92 @@
+#source "test_if_else.txt"
+call main
+halt
+	' * Global variables
+#line 1
+mal:
+		' * Parameters
+		' * Local variables
+enter 0
+#line 2
+pushb 77
+outb
+#line 2
+pushb 65
+outb
+#line 2
+pushb 76
+outb
+#line 2
+pushb 10
+outb
+ret 0 , 0 , 0
+#line 5
+bien:
+		' * Parameters
+		' * Local variables
+enter 0
+#line 6
+pushb 66
+outb
+#line 6
+pushb 73
+outb
+#line 6
+pushb 69
+outb
+#line 6
+pushb 78
+outb
+#line 6
+pushb 10
+outb
+ret 0 , 0 , 0
+#line 9
+main:
+		' * Parameters
+		' * Local variables
+#line 10
+		' * Int test (offset -2)
+enter 2
+#line 11
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 12
+push bp
+pushi -2
+addi
+loadi
+jz label0
+#line 13
+call mal
+jmp label1
+label0:
+#line 15
+call bien
+label1:
+#line 17
+push bp
+pushi -2
+addi
+loadi
+not
+jz label2
+#line 18
+pushi 0
+jz label4
+#line 19
+call mal
+jmp label5
+label4:
+#line 21
+call bien
+label5:
+#line 23
+call bien
+jmp label3
+label2:
+label3:
+ret 0 , 2 , 0

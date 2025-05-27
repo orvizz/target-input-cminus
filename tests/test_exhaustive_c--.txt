@@ -1,0 +1,230 @@
+int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int power(int base, int exponent) {
+    if (exponent == 0) {
+        return 1;
+    }
+    return base * power(base, exponent - 1);
+}
+
+void generateMatrix(int rowToShow, int colToShow) {
+    int[5][5] matrix;
+    int i;
+    int j;
+    i = 0;
+    rowToShow = rowToShow - 1;
+    colToShow = colToShow - 1;
+    while (i < 5) {
+        j = 0;
+        while (j < 5) {
+            matrix[i][j] = i * 5 + j;
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    i = 0;
+    while (i < 5) {
+        if (i == rowToShow) {
+            j = 0;
+            while (j < 5) {
+                if (j == colToShow) {
+                    write matrix[i][j], ' ';
+                } else {
+                    write 'X', ' ';
+                }
+                j = j + 1;
+            }
+        } else {
+            j = 0;
+            while (j < 5) {
+                write 'X', ' ';
+                j = j + 1;
+            }
+        }
+        write '\n';
+        i = i + 1;
+    }
+}
+
+void bien() {
+    write 'b', 'i', 'e', 'n', '\n';
+}
+
+void mal() {
+    write 'm', 'a', 'l', '\n';
+}
+
+void empty() {
+}
+
+void noStatements() {
+    int a;
+    double b;
+    char c;
+}
+
+void main() {
+    int i;
+    double f;
+    int rowToShow;
+    int colToShow;
+    int test;
+    struct {
+        char[20] name;
+        int age;
+        double salary;
+        struct {
+            char[3] color;
+            int number;
+            double irrational;
+        } favoriteThings;
+    } employee;
+
+    /* multi
+       line comment
+       is
+       ignored */
+
+    i = 0;
+    while (i < 10) {
+        write fibonacci(i), '\n';
+        i = i + 1;
+    }
+
+    f = 3.0;
+    write power((int) f, 5), '\n';
+    write '<', '=', 5;
+    read rowToShow, colToShow;
+    generateMatrix(rowToShow, colToShow);
+
+    test = 0;
+    if (test) {
+        if (0) {
+            mal();
+        } else {
+            mal();
+        }
+    }
+    if (!test) {
+        if (0) {
+            mal();
+        }
+    } else {
+        bien();
+    }
+
+    employee.name[0] = 'J';
+    employee.name[1] = 'o';
+    employee.name[2] = 'h';
+    employee.name[3] = 'n';
+    i = 0;
+    while (i < 16) {
+        employee.name[i + 4] = ' ';
+        i = i + 1;
+    }
+
+    employee.age = 30;
+    employee.salary = (double) 1200;
+
+    i = 0;
+    while (i < 20) {
+        if (!(employee.name[i] == ' ')) {
+            write employee.name[i], ' ';
+        }
+        i = i + 1;
+    }
+    write '\n';
+
+    employee.favoriteThings.color[0] = 'R';
+    employee.favoriteThings.color[1] = 'e';
+    employee.favoriteThings.color[2] = 'd';
+    employee.favoriteThings.number = 5;
+    employee.favoriteThings.irrational = 3.14159;
+    write 'F', 'C', '\n';
+    i = 0;
+    while (i < 3) {
+        write employee.favoriteThings.color[i], ' ';
+        i = i + 1;
+    }
+    write '\n';
+    write 'F', 'N', '\n';
+    write employee.favoriteThings.number, '\n';
+    write 'F', 'I', '\n';
+    write employee.favoriteThings.irrational, '\n';
+
+    write 'e', 'n', 't', 'e', 'r', ' ', 'n', 'e', 'w', ' ', 'f', 'n', '\n';
+    read employee.favoriteThings.number;
+    write employee.favoriteThings.number, '\n';
+
+    write 'e', 'n', 't', 'e', 'r', ' ', 'n', 'e', 'w', ' ', 'n', 'a', 'm', 'e', '\n';
+    i = 0;
+    while (i < 20) {
+        read employee.name[i];
+        if (employee.name[i] == '\n' || employee.name[i] == ' ') {
+            employee.name[i] = ' ';
+        }
+        i = i + 1;
+    }
+
+    i = 0;
+    while (i < 20) {
+        if (!(employee.name[i] == ' ')) {
+            write employee.name[i], ' ';
+        }
+        i = i + 1;
+    }
+    write '\n';
+
+    if (1 && 0 || 1) {
+        bien();
+    }
+    if (1 || 0 && 1) {
+        bien();
+    }
+    if (1 && 0 || 0) {
+        mal();
+    }
+    if (1 && (0 || 1)) {
+        bien();
+    }
+    if ((1 && 0) && 1) {
+        mal();
+    }
+    if (1 && 0 && 1) {
+        mal();
+    }
+    if (1 || 0 || 1) {
+        bien();
+    }
+    if (5 > 3 && 2 < 4) {
+        bien();
+    }
+    if (5 < 3 || 2 > 4) {
+        mal();
+    }
+    if (5 < 3 || 2 < 4) {
+        bien();
+    }
+
+    write 2 + 3 * 5, '\n';
+    write (2 + 3) * 5, '\n';
+    write 4 / 2 * 3, '\n';
+    write (double) 4 / (double) (2 * 3), '\n';
+    write -4 / 2 * 3, '\n';
+    write 2 - 4 + 3, '\n';
+    write 4 - 2 - 1, '\n';
+    write 2 + 3 - 5, '\n';
+    write 2 + (3 - 5), '\n';
+    write 4 - (2 - 1), '\n';
+
+    empty();
+    noStatements();
+}

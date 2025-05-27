@@ -1,0 +1,1435 @@
+#source "exhaustive_c--.txt"
+call main
+halt
+	' * Global variables
+#line 1
+fibonacci:
+		' * Parameters
+#line 1
+		' * Int n (offset 4)
+		' * Local variables
+enter 0
+#line 2
+push bp
+pushi 4
+addi
+loadi
+pushi 0
+eqi
+jz label0
+#line 3
+pushi 0
+ret 2 , 0 , 2
+jmp label1
+label0:
+label1:
+#line 5
+push bp
+pushi 4
+addi
+loadi
+pushi 1
+eqi
+jz label2
+#line 6
+pushi 1
+ret 2 , 0 , 2
+jmp label3
+label2:
+label3:
+#line 8
+push bp
+pushi 4
+addi
+loadi
+pushi 1
+subi
+call fibonacci
+push bp
+pushi 4
+addi
+loadi
+pushi 2
+subi
+call fibonacci
+addi
+ret 2 , 0 , 2
+#line 11
+power:
+		' * Parameters
+#line 11
+		' * Int base (offset 6)
+#line 11
+		' * Int exponent (offset 4)
+		' * Local variables
+enter 0
+#line 12
+push bp
+pushi 4
+addi
+loadi
+pushi 0
+eqi
+jz label4
+#line 13
+pushi 1
+ret 2 , 0 , 4
+jmp label5
+label4:
+label5:
+#line 15
+push bp
+pushi 6
+addi
+loadi
+push bp
+pushi 6
+addi
+loadi
+push bp
+pushi 4
+addi
+loadi
+pushi 1
+subi
+call power
+muli
+ret 2 , 0 , 4
+#line 18
+generateMatrix:
+		' * Parameters
+#line 18
+		' * Int rowToShow (offset 6)
+#line 18
+		' * Int colToShow (offset 4)
+		' * Local variables
+#line 19
+		' * Array<Array<Int>> matrix (offset -50)
+#line 20
+		' * Int i (offset -52)
+#line 21
+		' * Int j (offset -54)
+enter 54
+#line 22
+push bp
+pushi -52
+addi
+pushi 0
+storei
+#line 23
+push bp
+pushi 6
+addi
+push bp
+pushi 6
+addi
+loadi
+pushi 1
+subi
+storei
+#line 24
+push bp
+pushi 4
+addi
+push bp
+pushi 4
+addi
+loadi
+pushi 1
+subi
+storei
+#line 25
+label6:
+push bp
+pushi -52
+addi
+loadi
+pushi 5
+lti
+jz label7
+#line 26
+push bp
+pushi -54
+addi
+pushi 0
+storei
+#line 27
+label8:
+push bp
+pushi -54
+addi
+loadi
+pushi 5
+lti
+jz label9
+#line 28
+push bp
+pushi -50
+addi
+pushi 10
+push bp
+pushi -52
+addi
+loadi
+muli
+addi
+pushi 2
+push bp
+pushi -54
+addi
+loadi
+muli
+addi
+push bp
+pushi -52
+addi
+loadi
+pushi 5
+muli
+push bp
+pushi -54
+addi
+loadi
+addi
+storei
+#line 29
+push bp
+pushi -54
+addi
+push bp
+pushi -54
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label8
+label9:
+#line 31
+push bp
+pushi -52
+addi
+push bp
+pushi -52
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label6
+label7:
+#line 33
+push bp
+pushi -52
+addi
+pushi 0
+storei
+#line 34
+label10:
+push bp
+pushi -52
+addi
+loadi
+pushi 5
+lti
+jz label11
+#line 35
+push bp
+pushi -52
+addi
+loadi
+push bp
+pushi 6
+addi
+loadi
+eqi
+jz label12
+#line 36
+push bp
+pushi -54
+addi
+pushi 0
+storei
+#line 37
+label14:
+push bp
+pushi -54
+addi
+loadi
+pushi 5
+lti
+jz label15
+#line 38
+push bp
+pushi -54
+addi
+loadi
+push bp
+pushi 4
+addi
+loadi
+eqi
+jz label16
+#line 39
+push bp
+pushi -50
+addi
+pushi 10
+push bp
+pushi -52
+addi
+loadi
+muli
+addi
+pushi 2
+push bp
+pushi -54
+addi
+loadi
+muli
+addi
+loadi
+outi
+#line 39
+pushb 32
+outb
+jmp label17
+label16:
+#line 41
+pushb 88
+outb
+#line 41
+pushb 32
+outb
+label17:
+#line 43
+push bp
+pushi -54
+addi
+push bp
+pushi -54
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label14
+label15:
+jmp label13
+label12:
+#line 46
+push bp
+pushi -54
+addi
+pushi 0
+storei
+#line 47
+label18:
+push bp
+pushi -54
+addi
+loadi
+pushi 5
+lti
+jz label19
+#line 48
+pushb 88
+outb
+#line 48
+pushb 32
+outb
+#line 49
+push bp
+pushi -54
+addi
+push bp
+pushi -54
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label18
+label19:
+label13:
+#line 52
+pushb 10
+outb
+#line 53
+push bp
+pushi -52
+addi
+push bp
+pushi -52
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label10
+label11:
+ret 0 , 54 , 4
+#line 57
+bien:
+		' * Parameters
+		' * Local variables
+enter 0
+#line 58
+pushb 98
+outb
+#line 58
+pushb 105
+outb
+#line 58
+pushb 101
+outb
+#line 58
+pushb 110
+outb
+#line 58
+pushb 10
+outb
+ret 0 , 0 , 0
+#line 61
+mal:
+		' * Parameters
+		' * Local variables
+enter 0
+#line 62
+pushb 109
+outb
+#line 62
+pushb 97
+outb
+#line 62
+pushb 108
+outb
+#line 62
+pushb 10
+outb
+ret 0 , 0 , 0
+#line 65
+empty:
+		' * Parameters
+		' * Local variables
+enter 0
+ret 0 , 0 , 0
+#line 68
+noStatements:
+		' * Parameters
+		' * Local variables
+#line 69
+		' * Int a (offset -2)
+#line 70
+		' * Double b (offset -6)
+#line 71
+		' * Char c (offset -7)
+enter 7
+ret 0 , 7 , 0
+#line 74
+main:
+		' * Parameters
+		' * Local variables
+#line 75
+		' * Int i (offset -2)
+#line 76
+		' * Double f (offset -6)
+#line 77
+		' * Int rowToShow (offset -8)
+#line 78
+		' * Int colToShow (offset -10)
+#line 79
+		' * Int test (offset -12)
+#line 89
+		' * Struct employee (offset -47)
+enter 47
+#line 96
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 97
+label20:
+push bp
+pushi -2
+addi
+loadi
+pushi 10
+lti
+jz label21
+#line 98
+push bp
+pushi -2
+addi
+loadi
+call fibonacci
+outi
+#line 98
+pushb 10
+outb
+#line 99
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label20
+label21:
+#line 102
+push bp
+pushi -6
+addi
+pushf 3.0
+storef
+#line 103
+push bp
+pushi -6
+addi
+loadf
+f2i
+pushi 5
+call power
+outi
+#line 103
+pushb 10
+outb
+#line 104
+pushb 60
+outb
+#line 104
+pushb 61
+outb
+#line 104
+pushi 5
+outi
+#line 105
+push bp
+pushi -8
+addi
+ini
+storei
+#line 105
+push bp
+pushi -10
+addi
+ini
+storei
+#line 106
+push bp
+pushi -8
+addi
+loadi
+push bp
+pushi -10
+addi
+loadi
+call generateMatrix
+#line 108
+push bp
+pushi -12
+addi
+pushi 0
+storei
+#line 109
+push bp
+pushi -12
+addi
+loadi
+jz label22
+#line 110
+pushi 0
+jz label24
+#line 111
+call mal
+jmp label25
+label24:
+#line 113
+call mal
+label25:
+jmp label23
+label22:
+label23:
+#line 116
+push bp
+pushi -12
+addi
+loadi
+not
+jz label26
+#line 117
+pushi 0
+jz label28
+#line 118
+call mal
+jmp label29
+label28:
+label29:
+jmp label27
+label26:
+#line 121
+call bien
+label27:
+#line 124
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+pushi 0
+muli
+addi
+pushb 74
+storeb
+#line 125
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+pushi 1
+muli
+addi
+pushb 111
+storeb
+#line 126
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+pushi 2
+muli
+addi
+pushb 104
+storeb
+#line 127
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+pushi 3
+muli
+addi
+pushb 110
+storeb
+#line 128
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 129
+label30:
+push bp
+pushi -2
+addi
+loadi
+pushi 16
+lti
+jz label31
+#line 130
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+pushi 4
+addi
+muli
+addi
+pushb 32
+storeb
+#line 131
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label30
+label31:
+#line 134
+push bp
+pushi -47
+addi
+pushi 20
+addi
+pushi 30
+storei
+#line 135
+push bp
+pushi -47
+addi
+pushi 22
+addi
+pushi 1200
+i2f
+storef
+#line 137
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 138
+label32:
+push bp
+pushi -2
+addi
+loadi
+pushi 20
+lti
+jz label33
+#line 139
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadb
+b2i
+pushb 32
+b2i
+eqi
+not
+jz label34
+#line 140
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadb
+outb
+#line 140
+pushb 32
+outb
+jmp label35
+label34:
+label35:
+#line 142
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label32
+label33:
+#line 144
+pushb 10
+outb
+#line 146
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+pushi 0
+muli
+addi
+pushb 82
+storeb
+#line 147
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+pushi 1
+muli
+addi
+pushb 101
+storeb
+#line 148
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+pushi 2
+muli
+addi
+pushb 100
+storeb
+#line 149
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 3
+addi
+pushi 5
+storei
+#line 150
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 5
+addi
+pushf 3.141590118408203
+storef
+#line 151
+pushb 70
+outb
+#line 151
+pushb 67
+outb
+#line 151
+pushb 10
+outb
+#line 152
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 153
+label36:
+push bp
+pushi -2
+addi
+loadi
+pushi 3
+lti
+jz label37
+#line 154
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadb
+outb
+#line 154
+pushb 32
+outb
+#line 155
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label36
+label37:
+#line 157
+pushb 10
+outb
+#line 158
+pushb 70
+outb
+#line 158
+pushb 78
+outb
+#line 158
+pushb 10
+outb
+#line 159
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 3
+addi
+loadi
+outi
+#line 159
+pushb 10
+outb
+#line 160
+pushb 70
+outb
+#line 160
+pushb 73
+outb
+#line 160
+pushb 10
+outb
+#line 161
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 5
+addi
+loadf
+outf
+#line 161
+pushb 10
+outb
+#line 163
+pushb 101
+outb
+#line 163
+pushb 110
+outb
+#line 163
+pushb 116
+outb
+#line 163
+pushb 101
+outb
+#line 163
+pushb 114
+outb
+#line 163
+pushb 32
+outb
+#line 163
+pushb 110
+outb
+#line 163
+pushb 101
+outb
+#line 163
+pushb 119
+outb
+#line 163
+pushb 32
+outb
+#line 163
+pushb 102
+outb
+#line 163
+pushb 110
+outb
+#line 163
+pushb 10
+outb
+#line 164
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 3
+addi
+ini
+storei
+#line 165
+push bp
+pushi -47
+addi
+pushi 26
+addi
+pushi 3
+addi
+loadi
+outi
+#line 165
+pushb 10
+outb
+#line 167
+pushb 101
+outb
+#line 167
+pushb 110
+outb
+#line 167
+pushb 116
+outb
+#line 167
+pushb 101
+outb
+#line 167
+pushb 114
+outb
+#line 167
+pushb 32
+outb
+#line 167
+pushb 110
+outb
+#line 167
+pushb 101
+outb
+#line 167
+pushb 119
+outb
+#line 167
+pushb 32
+outb
+#line 167
+pushb 110
+outb
+#line 167
+pushb 97
+outb
+#line 167
+pushb 109
+outb
+#line 167
+pushb 101
+outb
+#line 167
+pushb 10
+outb
+#line 168
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 169
+label38:
+push bp
+pushi -2
+addi
+loadi
+pushi 20
+lti
+jz label39
+#line 170
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+inb
+storeb
+#line 171
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadb
+b2i
+pushb 10
+b2i
+eqi
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadb
+b2i
+pushb 32
+b2i
+eqi
+or
+jz label40
+#line 172
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+pushb 32
+storeb
+jmp label41
+label40:
+label41:
+#line 174
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label38
+label39:
+#line 177
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 178
+label42:
+push bp
+pushi -2
+addi
+loadi
+pushi 20
+lti
+jz label43
+#line 179
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadb
+b2i
+pushb 32
+b2i
+eqi
+not
+jz label44
+#line 180
+push bp
+pushi -47
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -2
+addi
+loadi
+muli
+addi
+loadb
+outb
+#line 180
+pushb 32
+outb
+jmp label45
+label44:
+label45:
+#line 182
+push bp
+pushi -2
+addi
+push bp
+pushi -2
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label42
+label43:
+#line 184
+pushb 10
+outb
+#line 186
+pushi 1
+pushi 0
+and
+pushi 1
+or
+jz label46
+#line 187
+call bien
+jmp label47
+label46:
+label47:
+#line 189
+pushi 1
+pushi 0
+or
+pushi 1
+and
+jz label48
+#line 190
+call bien
+jmp label49
+label48:
+label49:
+#line 192
+pushi 1
+pushi 0
+and
+pushi 0
+or
+jz label50
+#line 193
+call mal
+jmp label51
+label50:
+label51:
+#line 195
+pushi 1
+pushi 0
+pushi 1
+or
+and
+jz label52
+#line 196
+call bien
+jmp label53
+label52:
+label53:
+#line 198
+pushi 1
+pushi 0
+and
+pushi 1
+and
+jz label54
+#line 199
+call mal
+jmp label55
+label54:
+label55:
+#line 201
+pushi 1
+pushi 0
+and
+pushi 1
+and
+jz label56
+#line 202
+call mal
+jmp label57
+label56:
+label57:
+#line 204
+pushi 1
+pushi 0
+or
+pushi 1
+or
+jz label58
+#line 205
+call bien
+jmp label59
+label58:
+label59:
+#line 207
+pushi 5
+pushi 3
+gti
+pushi 2
+pushi 4
+lti
+and
+jz label60
+#line 208
+call bien
+jmp label61
+label60:
+label61:
+#line 210
+pushi 5
+pushi 3
+lti
+pushi 2
+pushi 4
+gti
+or
+jz label62
+#line 211
+call mal
+jmp label63
+label62:
+label63:
+#line 213
+pushi 5
+pushi 3
+lti
+pushi 2
+pushi 4
+lti
+or
+jz label64
+#line 214
+call bien
+jmp label65
+label64:
+label65:
+#line 217
+pushi 2
+pushi 3
+pushi 5
+muli
+addi
+outi
+#line 217
+pushb 10
+outb
+#line 218
+pushi 2
+pushi 3
+addi
+pushi 5
+muli
+outi
+#line 218
+pushb 10
+outb
+#line 219
+pushi 4
+pushi 2
+divi
+pushi 3
+muli
+outi
+#line 219
+pushb 10
+outb
+#line 220
+pushi 4
+i2f
+pushi 2
+pushi 3
+muli
+i2f
+divf
+outf
+#line 220
+pushb 10
+outb
+#line 221
+pushi 4
+pushi 2
+divi
+pushi 3
+muli
+outi
+#line 221
+pushb 10
+outb
+#line 222
+pushi 2
+pushi 4
+subi
+pushi 3
+addi
+outi
+#line 222
+pushb 10
+outb
+#line 223
+pushi 4
+pushi 2
+subi
+pushi 1
+subi
+outi
+#line 223
+pushb 10
+outb
+#line 224
+pushi 2
+pushi 3
+addi
+pushi 5
+subi
+outi
+#line 224
+pushb 10
+outb
+#line 225
+pushi 2
+pushi 3
+pushi 5
+subi
+addi
+outi
+#line 225
+pushb 10
+outb
+#line 226
+pushi 4
+pushi 2
+pushi 1
+subi
+subi
+outi
+#line 226
+pushb 10
+outb
+#line 228
+call empty
+#line 229
+call noStatements
+ret 0 , 47 , 0

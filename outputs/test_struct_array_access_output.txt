@@ -1,0 +1,104 @@
+#source "test_struct_array_access.txt"
+call main
+halt
+	' * Global variables
+#line 1
+main:
+		' * Parameters
+		' * Local variables
+#line 11
+		' * Struct employee (offset -35)
+#line 12
+		' * Int i (offset -37)
+enter 37
+#line 13
+push bp
+pushi -37
+addi
+pushi 0
+storei
+#line 15
+push bp
+pushi -35
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+pushi 0
+muli
+addi
+pushb 82
+storeb
+#line 16
+push bp
+pushi -35
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+pushi 1
+muli
+addi
+pushb 101
+storeb
+#line 17
+push bp
+pushi -35
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+pushi 2
+muli
+addi
+pushb 100
+storeb
+#line 19
+label0:
+push bp
+pushi -37
+addi
+loadi
+pushi 3
+lti
+jz label1
+#line 20
+push bp
+pushi -35
+addi
+pushi 26
+addi
+pushi 0
+addi
+pushi 1
+push bp
+pushi -37
+addi
+loadi
+muli
+addi
+loadb
+outb
+#line 20
+pushb 32
+outb
+#line 21
+push bp
+pushi -37
+addi
+push bp
+pushi -37
+addi
+loadi
+pushi 1
+addi
+storei
+jmp label0
+label1:
+ret 0 , 37 , 0

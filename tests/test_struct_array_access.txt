@@ -1,0 +1,23 @@
+void main() {
+    struct {
+        char[20] name;
+        int age;
+        double salary;
+        struct {
+            char[3] color;
+            int number;
+            double irrational;
+        } favoriteThings;
+    } employee;
+    int i;
+    i = 0;
+
+    employee.favoriteThings.color[0] = 'R';
+    employee.favoriteThings.color[1] = 'e';
+    employee.favoriteThings.color[2] = 'd';
+
+    while(i < 3) {
+        write employee.favoriteThings.color[i], ' ';
+        i = i+1;
+    }
+}

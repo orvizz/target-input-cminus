@@ -1,0 +1,25 @@
+void mal() {
+    write 'M', 'A', 'L', '\n';
+}
+
+void bien() {
+    write 'B', 'I', 'E', 'N', '\n';
+}
+
+void main() {
+    int test;
+    test = 0;
+    if(test) {
+        mal();
+    } else {
+        bien();
+    }
+    if(!test) {
+        if(0) {
+            mal();
+        } else {
+            bien();
+        }
+        bien();
+    }
+}
