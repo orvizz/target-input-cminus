@@ -1,5 +1,5 @@
 
-#source "test_extensions_ternary.txt"
+#source "extensions-ternaryExp.txt"
 
 	' * Global variables:
 	' * int one (offset 0)
@@ -38,7 +38,7 @@ halt
 
 #line	23
 	pusha	5
-	pushf	0.2
+	pushf	0.5
 	storef
 
 #line	27
