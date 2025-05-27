@@ -20,7 +20,7 @@ void main() {
 
     one = 1;
     zero = 0;
-    half = 0.2;
+    half = 0.5;
 
     // * Valid ternary usage in expressions
 
