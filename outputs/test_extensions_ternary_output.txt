@@ -1,0 +1,864 @@
+
+#source "test_extensions_ternary.txt"
+
+	' * Global variables:
+	' * int one (offset 0)
+	' * int zero (offset 2)
+	' * char c (offset 4)
+	' * real half (offset 5)
+	' * [10,int] iArr (offset 9)
+	' * record((a x int)x(b x int)) pair (offset 29)
+
+' Invocation to the main function
+call main
+halt
+
+
+#line	12
+
+ main:
+	' * Parameters
+	' * Local variables
+	' * int x (offset -2)
+	' * int y (offset -4)
+	' * int z (offset -6)
+	' * real d (offset -10)
+	' * char ch (offset -11)
+	enter	11
+
+#line	21
+	pusha	0
+	pushi	1
+	storei
+
+#line	22
+	pusha	2
+	pushi	0
+	storei
+
+#line	23
+	pusha	5
+	pushf	0.2
+	storef
+
+#line	27
+	push	bp
+	pushi	-2
+	addi
+	pusha	0
+	loadi
+	pushi	2
+	eqi
+	jz	label0
+	pushi	0
+	jmp	label1
+ label0:
+	pushi	1
+ label1:
+	storei
+
+#line	28
+	push	bp
+	pushi	-4
+	addi
+	pusha	0
+	loadi
+	pushi	1
+	eqi
+	jz	label2
+	pushi	1
+	jmp	label3
+ label2:
+	pushi	0
+ label3:
+	storei
+
+#line	29
+	push	bp
+	pushi	-6
+	addi
+	pusha	0
+	loadi
+	pushi	5
+	nei
+	jz	label4
+	pusha	2
+	loadi
+	jz	label6
+	pushi	0
+	jmp	label7
+ label6:
+	pushi	1
+ label7:
+	jmp	label5
+ label4:
+	pusha	2
+	loadi
+	jz	label8
+	pushi	2
+	jmp	label9
+ label8:
+	pushi	3
+ label9:
+ label5:
+	storei
+
+#line	30
+	push	bp
+	pushi	-10
+	addi
+	pusha	0
+	loadi
+	pushi	2
+	lti
+	jz	label10
+	pushf	1.11
+	jmp	label11
+ label10:
+	pushf	5.55
+ label11:
+	storef
+
+#line	31
+	push	bp
+	pushi	-11
+	addi
+	pusha	2
+	loadi
+	pushi	0
+	gti
+	jz	label12
+	pushb	78
+	jmp	label13
+ label12:
+	pushb	89
+ label13:
+	storeb
+
+#line	34
+	' * Write
+	pushb	120
+	outb
+
+#line	34
+	' * Write
+	pushb	32
+	outb
+
+#line	34
+	' * Write
+	pushb	61
+	outb
+
+#line	34
+	' * Write
+	pushb	32
+	outb
+
+#line	34
+	' * Write
+	push	bp
+	pushi	-2
+	addi
+	loadi
+	outi
+
+#line	34
+	' * Write
+	pushb	10
+	outb
+
+#line	35
+	' * Write
+	pushb	121
+	outb
+
+#line	35
+	' * Write
+	pushb	32
+	outb
+
+#line	35
+	' * Write
+	pushb	61
+	outb
+
+#line	35
+	' * Write
+	pushb	32
+	outb
+
+#line	35
+	' * Write
+	push	bp
+	pushi	-4
+	addi
+	loadi
+	outi
+
+#line	35
+	' * Write
+	pushb	10
+	outb
+
+#line	36
+	' * Write
+	pushb	122
+	outb
+
+#line	36
+	' * Write
+	pushb	32
+	outb
+
+#line	36
+	' * Write
+	pushb	61
+	outb
+
+#line	36
+	' * Write
+	pushb	32
+	outb
+
+#line	36
+	' * Write
+	push	bp
+	pushi	-6
+	addi
+	loadi
+	outi
+
+#line	36
+	' * Write
+	pushb	10
+	outb
+
+#line	37
+	' * Write
+	pushb	100
+	outb
+
+#line	37
+	' * Write
+	pushb	32
+	outb
+
+#line	37
+	' * Write
+	pushb	61
+	outb
+
+#line	37
+	' * Write
+	pushb	32
+	outb
+
+#line	37
+	' * Write
+	push	bp
+	pushi	-10
+	addi
+	loadf
+	outf
+
+#line	37
+	' * Write
+	pushb	10
+	outb
+
+#line	38
+	' * Write
+	pushb	99
+	outb
+
+#line	38
+	' * Write
+	pushb	104
+	outb
+
+#line	38
+	' * Write
+	pushb	32
+	outb
+
+#line	38
+	' * Write
+	pushb	61
+	outb
+
+#line	38
+	' * Write
+	pushb	32
+	outb
+
+#line	38
+	' * Write
+	push	bp
+	pushi	-11
+	addi
+	loadb
+	outb
+
+#line	38
+	' * Write
+	pushb	10
+	outb
+
+#line	41
+	' * If statement
+	pusha	0
+	loadi
+	jz	label16
+	pushi	1
+	jmp	label17
+ label16:
+	pushi	0
+ label17:
+	jz	label14
+	' * Body of the if branch
+
+#line	42
+	' * Write
+	pushb	84
+	outb
+
+#line	42
+	' * Write
+	pushb	114
+	outb
+
+#line	42
+	' * Write
+	pushb	117
+	outb
+
+#line	42
+	' * Write
+	pushb	101
+	outb
+
+#line	42
+	' * Write
+	pushb	32
+	outb
+
+#line	42
+	' * Write
+	pushb	99
+	outb
+
+#line	42
+	' * Write
+	pushb	111
+	outb
+
+#line	42
+	' * Write
+	pushb	110
+	outb
+
+#line	42
+	' * Write
+	pushb	100
+	outb
+
+#line	42
+	' * Write
+	pushb	105
+	outb
+
+#line	42
+	' * Write
+	pushb	116
+	outb
+
+#line	42
+	' * Write
+	pushb	105
+	outb
+
+#line	42
+	' * Write
+	pushb	111
+	outb
+
+#line	42
+	' * Write
+	pushb	110
+	outb
+
+#line	42
+	' * Write
+	pushb	10
+	outb
+	jmp	label15
+ label14:
+	' * Body of the else branch
+ label15:
+
+#line	46
+	push	bp
+	pushi	-2
+	addi
+	pusha	0
+	loadi
+	pushi	1
+	eqi
+	jz	label18
+	pusha	2
+	loadi
+	jz	label20
+	pushi	0
+	jmp	label21
+ label20:
+	pusha	5
+	loadf
+	pushf	0.5
+	ltf
+	jz	label22
+	pushi	2
+	jmp	label23
+ label22:
+	pushi	1
+ label23:
+ label21:
+	jmp	label19
+ label18:
+	pushi	3
+ label19:
+	storei
+
+#line	49
+	push	bp
+	pushi	-10
+	addi
+	pusha	0
+	loadi
+	pushi	1
+	eqi
+	jz	label24
+	pusha	2
+	loadi
+	pushi	0
+	eqi
+	jz	label26
+	pushf	1.11
+	jmp	label27
+ label26:
+	pushf	5.55
+ label27:
+	jmp	label25
+ label24:
+	pusha	5
+	loadf
+	pushf	1.0
+	ltf
+	jz	label28
+	pushf	2.22
+	jmp	label29
+ label28:
+	pushf	3.33
+ label29:
+ label25:
+	storef
+
+#line	52
+	push	bp
+	pushi	-11
+	addi
+	pusha	0
+	loadi
+	jz	label30
+	pusha	2
+	loadi
+	jz	label32
+	pushb	78
+	jmp	label33
+ label32:
+	pushb	89
+ label33:
+	jmp	label31
+ label30:
+	pusha	5
+	loadf
+	pushf	0.5
+	gtf
+	jz	label34
+	pushb	65
+	jmp	label35
+ label34:
+	pushb	90
+ label35:
+ label31:
+	storeb
+
+#line	55
+	push	bp
+	pushi	-4
+	addi
+	pusha	0
+	loadi
+	pushi	1
+	eqi
+	jz	label36
+	pusha	0
+	loadi
+	pushi	1
+	eqi
+	jz	label38
+	pushi	1
+	jmp	label39
+ label38:
+	pushi	0
+ label39:
+	jmp	label37
+ label36:
+	pusha	0
+	loadi
+	pushi	2
+	eqi
+	jz	label40
+	pushi	3
+	jmp	label41
+ label40:
+	pushi	4
+ label41:
+ label37:
+	storei
+
+#line	58
+	push	bp
+	pushi	-6
+	addi
+	pusha	0
+	loadi
+	jz	label42
+	pushi	1
+	jmp	label43
+ label42:
+	pushi	2
+ label43:
+	pusha	2
+	loadi
+	jz	label44
+	pushi	2
+	jmp	label45
+ label44:
+	pushi	1
+ label45:
+	addi
+	storei
+
+#line	61
+	' * If statement
+	pusha	0
+	loadi
+	pushi	1
+	eqi
+	jz	label48
+	pusha	2
+	loadi
+	jmp	label49
+ label48:
+	pushi	5
+ label49:
+	pushi	0
+	eqi
+	jz	label46
+	' * Body of the if branch
+
+#line	62
+	' * Write
+	pushb	105
+	outb
+
+#line	62
+	' * Write
+	pushb	102
+	outb
+
+#line	62
+	' * Write
+	pushb	32
+	outb
+
+#line	62
+	' * Write
+	pushb	99
+	outb
+
+#line	62
+	' * Write
+	pushb	104
+	outb
+
+#line	62
+	' * Write
+	pushb	97
+	outb
+
+#line	62
+	' * Write
+	pushb	105
+	outb
+
+#line	62
+	' * Write
+	pushb	110
+	outb
+
+#line	62
+	' * Write
+	pushb	101
+	outb
+
+#line	62
+	' * Write
+	pushb	100
+	outb
+
+#line	62
+	' * Write
+	pushb	32
+	outb
+
+#line	62
+	' * Write
+	pushb	116
+	outb
+
+#line	62
+	' * Write
+	pushb	114
+	outb
+
+#line	62
+	' * Write
+	pushb	117
+	outb
+
+#line	62
+	' * Write
+	pushb	101
+	outb
+
+#line	62
+	' * Write
+	pushb	10
+	outb
+	jmp	label47
+ label46:
+	' * Body of the else branch
+ label47:
+
+#line	65
+	' * Write
+	pushb	120
+	outb
+
+#line	65
+	' * Write
+	pushb	32
+	outb
+
+#line	65
+	' * Write
+	pushb	61
+	outb
+
+#line	65
+	' * Write
+	pushb	32
+	outb
+
+#line	65
+	' * Write
+	push	bp
+	pushi	-2
+	addi
+	loadi
+	outi
+
+#line	65
+	' * Write
+	pushb	10
+	outb
+
+#line	66
+	' * Write
+	pushb	100
+	outb
+
+#line	66
+	' * Write
+	pushb	32
+	outb
+
+#line	66
+	' * Write
+	pushb	61
+	outb
+
+#line	66
+	' * Write
+	pushb	32
+	outb
+
+#line	66
+	' * Write
+	push	bp
+	pushi	-10
+	addi
+	loadf
+	outf
+
+#line	66
+	' * Write
+	pushb	10
+	outb
+
+#line	67
+	' * Write
+	pushb	99
+	outb
+
+#line	67
+	' * Write
+	pushb	104
+	outb
+
+#line	67
+	' * Write
+	pushb	32
+	outb
+
+#line	67
+	' * Write
+	pushb	61
+	outb
+
+#line	67
+	' * Write
+	pushb	32
+	outb
+
+#line	67
+	' * Write
+	push	bp
+	pushi	-11
+	addi
+	loadb
+	outb
+
+#line	67
+	' * Write
+	pushb	10
+	outb
+
+#line	68
+	' * Write
+	pushb	121
+	outb
+
+#line	68
+	' * Write
+	pushb	32
+	outb
+
+#line	68
+	' * Write
+	pushb	61
+	outb
+
+#line	68
+	' * Write
+	pushb	32
+	outb
+
+#line	68
+	' * Write
+	push	bp
+	pushi	-4
+	addi
+	loadi
+	outi
+
+#line	68
+	' * Write
+	pushb	10
+	outb
+
+#line	69
+	' * Write
+	pushb	122
+	outb
+
+#line	69
+	' * Write
+	pushb	32
+	outb
+
+#line	69
+	' * Write
+	pushb	61
+	outb
+
+#line	69
+	' * Write
+	pushb	50
+	outb
+
+#line	69
+	' * Write
+	pushb	63
+	outb
+
+#line	69
+	' * Write
+	pushb	32
+	outb
+
+#line	69
+	' * Write
+	pushb	114
+	outb
+
+#line	69
+	' * Write
+	pushb	101
+	outb
+
+#line	69
+	' * Write
+	pushb	97
+	outb
+
+#line	69
+	' * Write
+	pushb	108
+	outb
+
+#line	69
+	' * Write
+	pushb	58
+	outb
+
+#line	69
+	' * Write
+	pushb	32
+	outb
+
+#line	69
+	' * Write
+	push	bp
+	pushi	-6
+	addi
+	loadi
+	outi
+
+#line	69
+	' * Write
+	pushb	10
+	outb
+	ret	0, 11, 0
