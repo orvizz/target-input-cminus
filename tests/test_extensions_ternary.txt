@@ -1,0 +1,103 @@
+// * Global variables
+int one, zero;
+char c;
+double half;
+int[10] iArr;
+struct {
+    int a;
+    int b;
+} pair;
+
+// * Main program
+void main() {
+    int x, y, z;
+    double d;
+    char ch;
+
+    // Variables for invalid semantic examples:
+    // int bad1, bad2, bad3, bad5, bad6, bad7;
+    // char bad4;
+
+    one = 1;
+    zero = 0;
+    half = 0.2;
+
+    // * Valid ternary usage in expressions
+
+    x = one==2 ? 0 : 1;
+    y = one==1 ? 1 : 0;
+    z = one!=5 ? (zero ? 0 : 1) : (zero ? 2 : 3);
+    d = one<2 ? 1.11 : 5.55;
+    ch = zero>0 ? 'N' : 'Y';
+
+    // Use write to verify the values
+    write 'x', ' ', '=', ' ', x,'\n';
+    write 'y', ' ', '=', ' ', y,'\n';
+    write 'z', ' ', '=', ' ', z,'\n';
+    write 'd', ' ', '=', ' ', d,'\n';
+    write 'c', 'h', ' ', '=', ' ', ch,'\n';
+
+    // * Valid use as conditions inside if
+    if (one ? 1 : 0) {
+       write 'T', 'r', 'u', 'e', ' ', 'c', 'o', 'n', 'd', 'i', 't', 'i', 'o', 'n','\n';
+    }
+
+    // 1. Deep nested ternary with 3 layers (int)
+    x = one==1 ? (zero ? 0 : (half<0.5 ? 2 : 1)) : 3;
+
+    // 2. Valid double expression with nested ternary
+    d = one==1 ? (zero==0 ? 1.11 : 5.55) : (half<1.0 ? 2.22 : 3.33);
+
+    // 3. Valid char result using nested ternary
+    ch = one ? (zero ? 'N' : 'Y') : (half>0.5 ? 'A' : 'Z');
+
+    // 4. Valid int assignment with all 3 branches using ternaries
+    y = one==1 ? (one==1 ? 1 : 0) : (one==2 ? 3 : 4);
+
+    // 5. Valid use of ternary expression result in another expression
+    z = (one ? 1 : 2) + (zero ? 2 : 1);
+
+    // 7. Chained ternary used as condition in if
+    if ((one==1 ? zero : 5) == 0) {
+        write 'i','f',' ','c','h','a','i','n','e','d',' ','t','r','u','e','\n';
+    }
+
+    write 'x', ' ', '=', ' ', x,'\n';
+    write 'd', ' ', '=', ' ', d,'\n';
+    write 'c', 'h', ' ', '=', ' ', ch,'\n';
+    write 'y', ' ', '=', ' ', y,'\n';
+    write 'z', ' ', '=', '2', '?',' ','r','e','a','l',':',' ',z,'\n';
+
+
+/*  Invalid examples (conceptually wrong, to test semantic errors)
+
+    bad1 = r ? 1 : 2;        // ERROR: condition must be int
+    bad2 = i ? 1 : 2.5;      // ERROR: mixed int and double
+    bad3 = n ? 'C' : 100;    // ERROR: char vs int mismatch
+    bad4 = i ? 'A' : 3.14;   // ERROR: char vs double mismatch
+    bad5 = i ? (n ? 1 : 2.5) : 3; // ERROR: inner ternary mismatch
+
+    // Instead, use these invalid expressions as conditions (which is still invalid if types are wrong)
+
+    if (r ? 1 : 0) { write 'I', 'n', 'v', 'a', 'l', 'i', 'd'; }     // ERROR
+    if (i ? 1 : 2.5) { write 'I', 'n', 'v', 'a', 'l', 'i', 'd'; }      // ERROR
+    if (n ? 'C' : 100) { write 'I', 'n', 'v', 'a', 'l', 'i', 'd'; }// ERROR
+
+
+    // Invalid cases with arrays and structs
+
+   bad6 = i ? iArr : altArr;     // ERROR: array type in ternary
+   bad7 = i ? pair : otherPair;  // ERROR: struct type in ternary
+
+   // Also invalid even if types match — they're not built-in types
+
+   if (i ? iArr : altArr) {
+      write 'I', 'n', 'v', 'a', 'l', 'i', 'd', ':', ' ', 'a', 'r', 'r', 'a', 'y';
+   }
+
+   if (n ? pair : otherPair) {
+      write 'I', 'n', 'v', 'a', 'l', 'i', 'd', ':', ' ', 's', 't', 'r', 'u', 'c', 't';
+   }
+*/
+
+}
