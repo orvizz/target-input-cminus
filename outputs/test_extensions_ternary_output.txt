@@ -1,5 +1,5 @@
 
-#source "extensions-ternaryExp.txt"
+#source "test_extensions_ternary.txt"
 
 	' * Global variables:
 	' * int one (offset 0)
