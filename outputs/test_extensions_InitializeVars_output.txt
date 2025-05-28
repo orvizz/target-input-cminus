@@ -1,0 +1,395 @@
+
+#source "test_extensions_InitializeVars.txt"
+
+	' * Global variables:
+	' * int i (offset 0)
+	pusha	0
+	pushi	3
+	storei
+	' * int n (offset 2)
+	' * char c (offset 4)
+	pusha	4
+	pushb	102
+	storeb
+	' * char e (offset 5)
+	pusha	5
+	pushb	102
+	storeb
+	' * real d (offset 6)
+	pusha	6
+	pushf	2.5
+	storef
+
+' Invocation to the main function
+call main
+halt
+
+
+#line	7
+
+ f:
+	' * Parameters
+	' * int a (offset 4)
+	' * Local variables
+	' * real r (offset -4)
+	enter	4
+
+#line	12
+	push	bp
+	pushi	-4
+	addi
+	pushf	0.2
+	storef
+
+#line	14
+	' * Write
+	pushb	97
+	outb
+
+#line	14
+	' * Write
+	pushb	32
+	outb
+
+#line	14
+	' * Write
+	pushb	61
+	outb
+
+#line	14
+	' * Write
+	pushb	32
+	outb
+
+#line	14
+	' * Write
+	pushb	51
+	outb
+
+#line	14
+	' * Write
+	pushb	63
+	outb
+
+#line	14
+	' * Write
+	pushb	58
+	outb
+
+#line	14
+	' * Write
+	pushb	32
+	outb
+
+#line	14
+	' * Write
+	push	bp
+	pushi	4
+	addi
+	loadi
+	outi
+
+#line	14
+	' * Write
+	pushb	10
+	outb
+
+#line	15
+	' * Write
+	pushb	114
+	outb
+
+#line	15
+	' * Write
+	pushb	32
+	outb
+
+#line	15
+	' * Write
+	pushb	61
+	outb
+
+#line	15
+	' * Write
+	pushb	32
+	outb
+
+#line	15
+	' * Write
+	pushb	48
+	outb
+
+#line	15
+	' * Write
+	pushb	46
+	outb
+
+#line	15
+	' * Write
+	pushb	50
+	outb
+
+#line	15
+	' * Write
+	pushb	63
+	outb
+
+#line	15
+	' * Write
+	pushb	58
+	outb
+
+#line	15
+	' * Write
+	pushb	32
+	outb
+
+#line	15
+	' * Write
+	push	bp
+	pushi	-4
+	addi
+	loadf
+	outf
+
+#line	15
+	' * Write
+	pushb	10
+	outb
+
+#line	16
+	' * Write
+	pushb	100
+	outb
+
+#line	16
+	' * Write
+	pushb	32
+	outb
+
+#line	16
+	' * Write
+	pushb	61
+	outb
+
+#line	16
+	' * Write
+	pushb	32
+	outb
+
+#line	16
+	' * Write
+	pushb	50
+	outb
+
+#line	16
+	' * Write
+	pushb	46
+	outb
+
+#line	16
+	' * Write
+	pushb	53
+	outb
+
+#line	16
+	' * Write
+	pushb	63
+	outb
+
+#line	16
+	' * Write
+	pushb	58
+	outb
+
+#line	16
+	' * Write
+	pushb	32
+	outb
+
+#line	16
+	' * Write
+	pusha	6
+	loadf
+	outf
+
+#line	16
+	' * Write
+	pushb	10
+	outb
+
+#line	18
+	pusha	2
+	pushi	7
+	storei
+
+#line	20
+	pusha	2
+	loadi
+	ret	2, 4, 2
+
+#line	24
+
+ main:
+	' * Parameters
+	' * Local variables
+
+#line	26
+	' * Write
+	pushb	105
+	outb
+
+#line	26
+	' * Write
+	pushb	32
+	outb
+
+#line	26
+	' * Write
+	pushb	61
+	outb
+
+#line	26
+	' * Write
+	pushb	32
+	outb
+
+#line	26
+	' * Write
+	pushb	51
+	outb
+
+#line	26
+	' * Write
+	pushb	63
+	outb
+
+#line	26
+	' * Write
+	pushb	58
+	outb
+
+#line	26
+	' * Write
+	pushb	32
+	outb
+
+#line	26
+	' * Write
+	pusha	0
+	loadi
+	outi
+
+#line	26
+	' * Write
+	pushb	10
+	outb
+
+#line	27
+	' * Write
+	pushb	99
+	outb
+
+#line	27
+	' * Write
+	pushb	32
+	outb
+
+#line	27
+	' * Write
+	pushb	61
+	outb
+
+#line	27
+	' * Write
+	pushb	32
+	outb
+
+#line	27
+	' * Write
+	pushb	102
+	outb
+
+#line	27
+	' * Write
+	pushb	63
+	outb
+
+#line	27
+	' * Write
+	pushb	58
+	outb
+
+#line	27
+	' * Write
+	pushb	32
+	outb
+
+#line	27
+	' * Write
+	pusha	4
+	loadb
+	outb
+
+#line	27
+	' * Write
+	pushb	10
+	outb
+
+#line	28
+	' * Write
+	pushb	101
+	outb
+
+#line	28
+	' * Write
+	pushb	32
+	outb
+
+#line	28
+	' * Write
+	pushb	61
+	outb
+
+#line	28
+	' * Write
+	pushb	32
+	outb
+
+#line	28
+	' * Write
+	pushb	102
+	outb
+
+#line	28
+	' * Write
+	pushb	63
+	outb
+
+#line	28
+	' * Write
+	pushb	58
+	outb
+
+#line	28
+	' * Write
+	pushb	32
+	outb
+
+#line	28
+	' * Write
+	pusha	5
+	loadb
+	outb
+
+#line	28
+	' * Write
+	pushb	10
+	outb
+
+#line	30
+	pusha	0
+	loadi
+call f
+	popi
+	ret	0, 0, 0
