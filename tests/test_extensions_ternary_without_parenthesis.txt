@@ -1,0 +1,15 @@
+void main() {
+    int zero;
+    int one;
+    char ch;
+    zero = 0;
+    one = 1;
+
+    ch = one ? zero ? 'a' : 'b' : 'c';
+
+    write ch;
+
+    ch = zero ? 'a' : one ? one ? zero ? 'b' : 'c' : 'e' : 'f';
+
+    write ch;
+}

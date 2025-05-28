@@ -1,0 +1,106 @@
+#source "test_extensions_ternary_without_parenthesis.txt"
+call main
+halt
+	' * Global variables
+#line 1
+main:
+		' * Parameters
+		' * Local variables
+#line 2
+		' * Int zero (offset -2)
+#line 3
+		' * Int one (offset -4)
+#line 4
+		' * Char ch (offset -5)
+enter 5
+#line 5
+push bp
+pushi -2
+addi
+pushi 0
+storei
+#line 6
+push bp
+pushi -4
+addi
+pushi 1
+storei
+#line 8
+push bp
+pushi -5
+addi
+push bp
+pushi -4
+addi
+loadi
+jz label0
+push bp
+pushi -2
+addi
+loadi
+jz label2
+pushb 97
+jmp label3
+label2:
+pushb 98
+label3:
+jmp label1
+label0:
+pushb 99
+label1:
+storeb
+#line 10
+push bp
+pushi -5
+addi
+loadb
+outb
+#line 12
+push bp
+pushi -5
+addi
+push bp
+pushi -2
+addi
+loadi
+jz label6
+pushb 97
+jmp label7
+label6:
+push bp
+pushi -4
+addi
+loadi
+label7:
+jz label4
+push bp
+pushi -4
+addi
+loadi
+jz label8
+push bp
+pushi -2
+addi
+loadi
+jz label10
+pushb 98
+jmp label11
+label10:
+pushb 99
+label11:
+jmp label9
+label8:
+pushb 101
+label9:
+jmp label5
+label4:
+pushb 102
+label5:
+storeb
+#line 14
+push bp
+pushi -5
+addi
+loadb
+outb
+ret 0 , 5 , 0
